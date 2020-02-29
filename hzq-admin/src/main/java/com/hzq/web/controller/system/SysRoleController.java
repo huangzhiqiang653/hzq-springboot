@@ -10,12 +10,12 @@ import com.hzq.framework.web.base.BaseController;
 import com.hzq.system.domain.SysRole;
 import com.hzq.system.service.ISysRoleService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -28,7 +28,7 @@ import java.util.List;
 public class SysRoleController extends BaseController {
     private String prefix = "system/role";
 
-    @Autowired
+    @Resource
     private ISysRoleService roleService;
 
     @RequiresPermissions("system:role:view")

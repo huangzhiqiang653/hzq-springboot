@@ -30,7 +30,7 @@ import com.hzq.common.utils.poi.ExcelUtil;
 public class ${className}Controller extends BaseController {
     private String prefix = "${moduleName}/${classname}";
 
-    @Autowired
+    @Resource
     private I${className}Service ${classname}Service;
 
     @RequiresPermissions("${moduleName}:${classname}:view")

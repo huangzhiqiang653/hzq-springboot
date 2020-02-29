@@ -9,13 +9,13 @@ import com.hzq.framework.web.base.BaseController;
 import com.hzq.system.domain.SysLogininfor;
 import com.hzq.system.service.ISysLogininforService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -28,7 +28,7 @@ import java.util.List;
 public class SysLogininforController extends BaseController {
     private String prefix = "monitor/logininfor";
 
-    @Autowired
+    @Resource
     private ISysLogininforService logininforService;
 
     @RequiresPermissions("monitor:logininfor:view")

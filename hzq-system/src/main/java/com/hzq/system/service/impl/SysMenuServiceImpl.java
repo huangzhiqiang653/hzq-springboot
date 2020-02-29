@@ -8,9 +8,9 @@ import com.hzq.system.domain.SysUser;
 import com.hzq.system.mapper.SysMenuMapper;
 import com.hzq.system.mapper.SysRoleMenuMapper;
 import com.hzq.system.service.ISysMenuService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.text.MessageFormat;
 import java.util.*;
 
@@ -23,10 +23,10 @@ import java.util.*;
 public class SysMenuServiceImpl implements ISysMenuService {
     public static final String PREMISSION_STRING = "perms[\"{0}\"]";
 
-    @Autowired
+    @Resource
     private SysMenuMapper menuMapper;
 
-    @Autowired
+    @Resource
     private SysRoleMenuMapper roleMenuMapper;
 
     /**

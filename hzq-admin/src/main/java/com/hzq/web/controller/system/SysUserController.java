@@ -14,13 +14,13 @@ import com.hzq.system.service.ISysPostService;
 import com.hzq.system.service.ISysRoleService;
 import com.hzq.system.service.ISysUserService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -33,16 +33,16 @@ import java.util.List;
 public class SysUserController extends BaseController {
     private String prefix = "system/user";
 
-    @Autowired
+    @Resource
     private ISysUserService userService;
 
-    @Autowired
+    @Resource
     private ISysRoleService roleService;
 
-    @Autowired
+    @Resource
     private ISysPostService postService;
 
-    @Autowired
+    @Resource
     private SysPasswordService passwordService;
 
     @RequiresPermissions("system:user:view")

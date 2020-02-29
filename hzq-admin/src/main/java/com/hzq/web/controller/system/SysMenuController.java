@@ -9,11 +9,11 @@ import com.hzq.system.domain.SysMenu;
 import com.hzq.system.domain.SysRole;
 import com.hzq.system.service.ISysMenuService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -27,7 +27,7 @@ import java.util.Map;
 public class SysMenuController extends BaseController {
     private String prefix = "system/menu";
 
-    @Autowired
+    @Resource
     private ISysMenuService menuService;
 
     @RequiresPermissions("system:menu:view")

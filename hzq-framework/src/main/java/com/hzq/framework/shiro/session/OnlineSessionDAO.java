@@ -6,9 +6,9 @@ import com.hzq.framework.manager.factory.AsyncFactory;
 import com.hzq.framework.shiro.service.SysShiroService;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.eis.EnterpriseCacheSessionDAO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -27,7 +27,7 @@ public class OnlineSessionDAO extends EnterpriseCacheSessionDAO {
      */
     @Value("${shiro.session.dbSyncPeriod}")
     private int dbSyncPeriod;
-    @Autowired
+    @Resource
     private SysShiroService sysShiroService;
 
     public OnlineSessionDAO() {

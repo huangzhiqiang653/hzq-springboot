@@ -15,9 +15,9 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.Velocity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.StringWriter;
@@ -34,7 +34,7 @@ import java.util.zip.ZipOutputStream;
 public class GenServiceImpl implements IGenService {
     private static final Logger log = LoggerFactory.getLogger(GenServiceImpl.class);
 
-    @Autowired
+    @Resource
     private GenMapper genMapper;
 
     /**

@@ -13,12 +13,13 @@ import com.hzq.system.service.ISysDictDataService;
 import com.hzq.system.service.ISysUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
+import javax.annotation.Resource;
 
 /**
  * 个人信息 业务处理
@@ -32,13 +33,13 @@ public class SysProfileController extends BaseController {
 
     private String prefix = "system/user/profile";
 
-    @Autowired
+    @Resource
     private ISysUserService userService;
 
-    @Autowired
+    @Resource
     private SysPasswordService passwordService;
 
-    @Autowired
+    @Resource
     private ISysDictDataService dictDataService;
 
     @Value("${hzq.profile}")

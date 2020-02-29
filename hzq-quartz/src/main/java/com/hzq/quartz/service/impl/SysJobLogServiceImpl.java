@@ -4,9 +4,9 @@ import com.hzq.common.support.Convert;
 import com.hzq.quartz.domain.SysJobLog;
 import com.hzq.quartz.mapper.SysJobLogMapper;
 import com.hzq.quartz.service.ISysJobLogService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Service
 public class SysJobLogServiceImpl implements ISysJobLogService {
-    @Autowired
+    @Resource
     private SysJobLogMapper jobLogMapper;
 
     /**

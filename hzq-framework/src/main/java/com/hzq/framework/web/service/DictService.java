@@ -2,9 +2,9 @@ package com.hzq.framework.web.service;
 
 import com.hzq.system.domain.SysDictData;
 import com.hzq.system.service.ISysDictDataService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Service("dict")
 public class DictService {
-    @Autowired
+    @Resource
     private ISysDictDataService dictDataService;
 
     /**

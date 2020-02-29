@@ -6,9 +6,9 @@ import org.apache.shiro.session.mgt.SessionValidationScheduler;
 import org.apache.shiro.session.mgt.ValidatingSessionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import javax.annotation.Resource;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
@@ -23,7 +23,7 @@ public class SpringSessionValidationScheduler implements SessionValidationSchedu
     /**
      * 定时器，用于处理超时的挂起请求，也用于连接断开时的重连。
      */
-    @Autowired
+    @Resource
     @Qualifier("scheduledExecutorService")
     private ScheduledExecutorService executorService;
 

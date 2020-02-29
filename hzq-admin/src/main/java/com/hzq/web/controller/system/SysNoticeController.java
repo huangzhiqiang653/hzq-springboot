@@ -9,11 +9,11 @@ import com.hzq.framework.web.base.BaseController;
 import com.hzq.system.domain.SysNotice;
 import com.hzq.system.service.ISysNoticeService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -26,7 +26,7 @@ import java.util.List;
 public class SysNoticeController extends BaseController {
     private String prefix = "system/notice";
 
-    @Autowired
+    @Resource
     private ISysNoticeService noticeService;
 
     @RequiresPermissions("system:notice:view")

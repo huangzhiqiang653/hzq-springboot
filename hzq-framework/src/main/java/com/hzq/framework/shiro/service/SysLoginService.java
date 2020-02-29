@@ -13,9 +13,10 @@ import com.hzq.framework.manager.factory.AsyncFactory;
 import com.hzq.framework.util.ShiroUtils;
 import com.hzq.system.domain.SysUser;
 import com.hzq.system.service.ISysUserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
+
+import javax.annotation.Resource;
 
 /**
  * 登录校验方法
@@ -24,10 +25,10 @@ import org.springframework.util.StringUtils;
  */
 @Component
 public class SysLoginService {
-    @Autowired
+    @Resource
     private SysPasswordService passwordService;
 
-    @Autowired
+    @Resource
     private ISysUserService userService;
 
     /**

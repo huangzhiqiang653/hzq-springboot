@@ -4,8 +4,8 @@ import com.hzq.common.constant.ShiroConstants;
 import com.hzq.framework.shiro.session.OnlineSession;
 import com.hzq.framework.shiro.session.OnlineSessionDAO;
 import org.apache.shiro.web.filter.PathMatchingFilter;
-import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
@@ -15,7 +15,7 @@ import javax.servlet.ServletResponse;
  * @author 黄智强
  */
 public class SyncOnlineSessionFilter extends PathMatchingFilter {
-    @Autowired
+    @Resource
     private OnlineSessionDAO onlineSessionDAO;
 
     /**

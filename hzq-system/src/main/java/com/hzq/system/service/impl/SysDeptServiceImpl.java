@@ -8,9 +8,9 @@ import com.hzq.system.domain.SysDept;
 import com.hzq.system.domain.SysRole;
 import com.hzq.system.mapper.SysDeptMapper;
 import com.hzq.system.service.ISysDeptService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +23,7 @@ import java.util.Map;
  */
 @Service
 public class SysDeptServiceImpl implements ISysDeptService {
-    @Autowired
+    @Resource
     private SysDeptMapper deptMapper;
 
     /**

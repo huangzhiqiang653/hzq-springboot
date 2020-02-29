@@ -4,9 +4,9 @@ import com.hzq.common.support.Convert;
 import com.hzq.system.domain.SysLogininfor;
 import com.hzq.system.mapper.SysLogininforMapper;
 import com.hzq.system.service.ISysLogininforService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class SysLogininforServiceImpl implements ISysLogininforService {
 
-    @Autowired
+    @Resource
     private SysLogininforMapper logininforMapper;
 
     /**

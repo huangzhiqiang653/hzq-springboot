@@ -9,10 +9,10 @@ import com.hzq.quartz.util.CronUtils;
 import com.hzq.quartz.util.ScheduleUtils;
 import org.quartz.CronTrigger;
 import org.quartz.Scheduler;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -22,10 +22,10 @@ import java.util.List;
  */
 @Service
 public class SysJobServiceImpl implements ISysJobService {
-    @Autowired
+    @Resource
     private Scheduler scheduler;
 
-    @Autowired
+    @Resource
     private SysJobMapper jobMapper;
 
     /**

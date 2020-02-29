@@ -5,9 +5,9 @@ import com.hzq.framework.shiro.session.OnlineSession;
 import com.hzq.system.domain.SysUserOnline;
 import com.hzq.system.service.ISysUserOnlineService;
 import org.apache.shiro.session.Session;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 
 /**
@@ -17,7 +17,7 @@ import java.io.Serializable;
  */
 @Component
 public class SysShiroService {
-    @Autowired
+    @Resource
     private ISysUserOnlineService onlineService;
 
     /**

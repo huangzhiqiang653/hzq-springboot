@@ -5,9 +5,9 @@ import com.hzq.common.utils.StringUtils;
 import com.hzq.system.domain.SysUserOnline;
 import com.hzq.system.mapper.SysUserOnlineMapper;
 import com.hzq.system.service.ISysUserOnlineService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
@@ -18,7 +18,7 @@ import java.util.List;
  */
 @Service
 public class SysUserOnlineServiceImpl implements ISysUserOnlineService {
-    @Autowired
+    @Resource
     private SysUserOnlineMapper userOnlineDao;
 
     /**

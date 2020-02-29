@@ -10,9 +10,9 @@ import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.AccessControlFilter;
 import org.apache.shiro.web.util.WebUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class OnlineSessionFilter extends AccessControlFilter {
     @Value("${shiro.user.loginUrl}")
     private String loginUrl;
 
-    @Autowired
+    @Resource
     private OnlineSessionDAO onlineSessionDAO;
 
     /**

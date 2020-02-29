@@ -8,9 +8,9 @@ import com.hzq.system.domain.SysPost;
 import com.hzq.system.mapper.SysPostMapper;
 import com.hzq.system.mapper.SysUserPostMapper;
 import com.hzq.system.service.ISysPostService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -20,10 +20,10 @@ import java.util.List;
  */
 @Service
 public class SysPostServiceImpl implements ISysPostService {
-    @Autowired
+    @Resource
     private SysPostMapper postMapper;
 
-    @Autowired
+    @Resource
     private SysUserPostMapper userPostMapper;
 
     /**

@@ -10,11 +10,11 @@ import com.hzq.framework.web.base.BaseController;
 import com.hzq.system.domain.SysDictType;
 import com.hzq.system.service.ISysDictTypeService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -27,7 +27,7 @@ import java.util.List;
 public class SysDictTypeController extends BaseController {
     private String prefix = "system/dict/type";
 
-    @Autowired
+    @Resource
     private ISysDictTypeService dictTypeService;
 
     @RequiresPermissions("system:dict:view")

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PreDestroy;
+import javax.annotation.Resource;
 
 /**
  * 确保应用退出时能关闭后台线程
@@ -17,7 +18,7 @@ import javax.annotation.PreDestroy;
 public class ShutdownManager {
     private static final Logger logger = LoggerFactory.getLogger("sys-user");
 
-    @Autowired(required = false)
+    @Resource
     private SpringSessionValidationScheduler springSessionValidationScheduler;
 
     @PreDestroy

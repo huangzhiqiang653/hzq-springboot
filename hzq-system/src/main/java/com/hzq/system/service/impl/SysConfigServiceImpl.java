@@ -6,9 +6,9 @@ import com.hzq.common.utils.StringUtils;
 import com.hzq.system.domain.SysConfig;
 import com.hzq.system.mapper.SysConfigMapper;
 import com.hzq.system.service.ISysConfigService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -18,7 +18,7 @@ import java.util.List;
  */
 @Service
 public class SysConfigServiceImpl implements ISysConfigService {
-    @Autowired
+    @Resource
     private SysConfigMapper configMapper;
 
     /**

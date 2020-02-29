@@ -12,10 +12,10 @@ import com.hzq.framework.web.base.BaseController;
 import com.hzq.system.domain.SysUserOnline;
 import com.hzq.system.service.ISysUserOnlineService;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -28,10 +28,10 @@ import java.util.List;
 public class SysUserOnlineController extends BaseController {
     private String prefix = "monitor/online";
 
-    @Autowired
+    @Resource
     private ISysUserOnlineService userOnlineService;
 
-    @Autowired
+    @Resource
     private OnlineSessionDAO onlineSessionDAO;
 
     @RequiresPermissions("monitor:online:view")

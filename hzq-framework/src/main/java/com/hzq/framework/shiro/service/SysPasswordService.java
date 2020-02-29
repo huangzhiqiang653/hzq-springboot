@@ -10,11 +10,11 @@ import com.hzq.system.domain.SysUser;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheManager;
 import org.apache.shiro.crypto.hash.Md5Hash;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -24,7 +24,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Component
 public class SysPasswordService {
-    @Autowired
+    @Resource
     private CacheManager cacheManager;
 
     private Cache<String, AtomicInteger> loginRecordCache;

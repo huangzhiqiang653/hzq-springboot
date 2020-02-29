@@ -8,9 +8,9 @@ import com.hzq.system.domain.SysDictType;
 import com.hzq.system.mapper.SysDictDataMapper;
 import com.hzq.system.mapper.SysDictTypeMapper;
 import com.hzq.system.service.ISysDictTypeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -20,10 +20,10 @@ import java.util.List;
  */
 @Service
 public class SysDictTypeServiceImpl implements ISysDictTypeService {
-    @Autowired
+    @Resource
     private SysDictTypeMapper dictTypeMapper;
 
-    @Autowired
+    @Resource
     private SysDictDataMapper dictDataMapper;
 
     /**

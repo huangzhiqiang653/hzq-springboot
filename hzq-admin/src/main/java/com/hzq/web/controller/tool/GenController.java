@@ -9,10 +9,10 @@ import com.hzq.generator.domain.TableInfo;
 import com.hzq.generator.service.IGenService;
 import org.apache.commons.io.IOUtils;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
@@ -27,7 +27,7 @@ import java.util.List;
 public class GenController extends BaseController {
     private String prefix = "tool/gen";
 
-    @Autowired
+    @Resource
     private IGenService genService;
 
     @RequiresPermissions("tool:gen:view")

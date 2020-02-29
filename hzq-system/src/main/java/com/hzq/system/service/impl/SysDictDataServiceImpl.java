@@ -4,9 +4,9 @@ import com.hzq.common.support.Convert;
 import com.hzq.system.domain.SysDictData;
 import com.hzq.system.mapper.SysDictDataMapper;
 import com.hzq.system.service.ISysDictDataService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -16,7 +16,7 @@ import java.util.List;
  */
 @Service
 public class SysDictDataServiceImpl implements ISysDictDataService {
-    @Autowired
+    @Resource
     private SysDictDataMapper dictDataMapper;
 
     /**
