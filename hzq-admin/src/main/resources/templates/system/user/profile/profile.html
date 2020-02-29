@@ -36,7 +36,9 @@
                     <div class="col-sm-4">
                         <div class="text-center">
                             <img alt="image"
-                                 class="mg-circle m-t-xs img-responsive" th:src="(${user.avatar} == '') ? @{/img/profile.jpeg} : @{/profile/avatar/} + ${user.avatar}" onerror='this.src="/img/profile.jpeg"'>
+                                 class="mg-circle m-t-xs img-responsive"
+                                 th:src="(${user.avatar} == '') ? @{/img/profile.jpeg} : @{/profile/avatar/} + ${user.avatar}"
+                                 th:onerror="'this.src=\''+@{/img/profile.jpeg}+'\''">
                             <div class="m-t-xs font-bold">[[${user.loginIp}]]</div>
                         </div>
                     </div>
