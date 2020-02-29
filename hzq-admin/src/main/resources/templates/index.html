@@ -55,7 +55,7 @@
                             <div class="hide" th:text="个人中心"></div>
                             <div class="pull-left image">
                                 <img alt="User Image"
-                                     class="img-circle" th:src="(${user.avatar} == '') ? @{/img/profile.jpeg} : @{/profile/avatar/} + ${user.avatar}">
+                                     class="img-circle" th:src="(${user.avatar} == '') ? @{/img/profile.jpeg} : @{/profile/avatar/} + ${user.avatar}" onerror='this.src="/img/profile.jpeg"'>
                             </div>
                         </a>
                         <div class="pull-left info">
@@ -110,8 +110,8 @@
                     <li><a id="fullScreen" title="全屏显示"><i class="fa fa-arrows-alt"></i> 全屏显示</a></li>
                     <li class="dropdown user-menu">
                         <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="javascript:">
-                            <img class="user-image"
-                                 th:onerror=" @{/img/profile.jpeg}" th:src="(${user.avatar} == '') ? @{/img/profile.jpeg} : @{/profile/avatar/} + ${user.avatar}">
+                            <img alt="Image"
+                                 class="user-image" th:src="(${user.avatar} == '') ? @{/img/profile.jpeg} : @{/profile/avatar/} + ${user.avatar}" onerror='this.src="/img/profile.jpeg"'>
                             <span class="hidden-xs">[[${user.userName}]]</span>
                         </a>
                         <ul class="dropdown-menu">
