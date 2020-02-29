@@ -2,7 +2,6 @@ package com.hzq.web.controller.system;
 
 import com.hzq.common.annotation.Log;
 import com.hzq.common.base.AjaxResult;
-import com.hzq.common.config.Global;
 import com.hzq.common.enums.BusinessType;
 import com.hzq.common.utils.StringUtils;
 import com.hzq.common.utils.file.FileUploadUtils;
@@ -15,6 +14,7 @@ import com.hzq.system.service.ISysUserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
@@ -40,6 +40,9 @@ public class SysProfileController extends BaseController {
 
     @Autowired
     private ISysDictDataService dictDataService;
+
+    @Value("${hzq.profile}")
+    private String uploadPath;
 
     /**
      * 个人信息
@@ -138,7 +141,7 @@ public class SysProfileController extends BaseController {
         SysUser currentUser = getSysUser();
         try {
             if (!file.isEmpty()) {
-                String avatar = FileUploadUtils.upload(Global.getAvatarPath(), file);
+                String avatar = FileUploadUtils.upload(uploadPath, file);
                 currentUser.setAvatar(avatar);
                 if (userService.updateUserInfo(currentUser) > 0) {
                     setSysUser(userService.selectUserById(currentUser.getUserId()));
